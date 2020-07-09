@@ -1,0 +1,1 @@
+default_app_config = 'survey_sens.apps.SensConfig'

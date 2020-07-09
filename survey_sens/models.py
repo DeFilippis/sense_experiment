@@ -13,7 +13,7 @@ import json
 import random
 from django.template.loader import render_to_string
 
-author = 'Alexander Svistunov, Philipp Chapkovski'
+author = 'Philipp Chapkovski'
 
 doc = """
 Dictator game, social conformity game.
