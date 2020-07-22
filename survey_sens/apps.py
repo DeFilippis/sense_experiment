@@ -8,6 +8,9 @@ class SensConfig(AppConfig):
 
     def ready(self):
         t = settings.TEMPLATES[0]
-        t['OPTIONS']['builtins'] = ['otree.templatetags.otree']
+        t['OPTIONS']['builtins'] = [
+            'otree.templatetags.otree',
+            'django.templatetags.i18n'
+        ]
 
         print("AAAA", settings.TEMPLATES)
