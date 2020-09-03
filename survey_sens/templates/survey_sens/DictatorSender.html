@@ -2,14 +2,14 @@
 {% load otree i18n %}
 
 {% block title %}
-    Вы {{ player.role_desc }}
+    Your role is {{ player.role_desc }}
 {% endblock %}
 
 {% block content %}
 
     {% if  session.config.info %}
         <link rel="stylesheet" href="{% static 'global/css/likert.css' %}">
-        <div> Ответ другого участника (отмечен <span class="bg-danger text-white">красным цветом</span>):</div>
+        <div> The answer of the second participant is marked <span class="bg-danger text-white">in red</span>):</div>
         <div class="card my-3">
             <div class="card-body">
                 {{ player.get_other_answer }}
@@ -19,12 +19,18 @@
     {% endif %}
 
 
-    <p> Вам выпала роль <b>Отправителя.</b> У вас есть 100 центов ($1), которые Вы можете разделить любым способом.</p>
-    <p> Выберите сумму в центах, которую хотите отправить, остаток Вы получаете в виде бонуса в Толоке. </p>
+    <p>
+    You have the role of Sender. You have 100 cents ($1) which you can share in any way.
+    </p>
+    <p>
+    Choose the amount in cents that you want to send, the balance you get as a bonus.
+    </p>
     {% formfield group.sent_amount %}
 
     <div class="form-group ">
-        <label class="col-form-label">Ваш бонус составит:</label>
+        <label class="col-form-label">
+           Your bonus will be:
+        </label>
         <div class="controls  ">
             <div class="input-group input-group-narrow">
                 <input type="number" value="None" step="1" min="0" max="100" required="" id="id_bonus_left"

@@ -2,16 +2,20 @@
 {% load otree static %}
 
 {% block title %}
-   Questionnaire
+    Questionnaire
 {% endblock %}
 
 {% block content %}
-      {% if  session.config.info and view.info|default_if_none:False %}
-        {% include  'survey_sens/includes/info_warning.html' %}
-    {% endif %}
-    {{ form.media }}
+    {% autoescape off %}
 
-    {% formfields %}
+
+        {% if  session.config.info and view.info|default_if_none:False %}
+            {% include  'survey_sens/includes/info_warning.html' %}
+        {% endif %}
+        {{ form.media }}
+
+        {% formfields %}
+    {% endautoescape %}
     {% next_button %}
 
 {% endblock %}

@@ -1,14 +1,14 @@
 <div class="card my-3">
     <div class="card-body">
-        {% if player.role == 'dictator' %}
-            <div>Ваши ответы <b>не будут</b> показаны второму участнику.</div>
-            <div>Но ответ второго участника (<b>Получателя</b>) на один из вопросов, отмеченных  <span class="bg-primary text-white">синим цветом</span>, будет
-                показан вам.
-            </div>
-        {% else %}
-            <div>Ваш ответ на один из вопросов, отмеченных <span class="bg-primary text-white">синим цветом</span>, будет
-                показан второму участнику (<b>Отправителю</b>).
-            </div>
-        {% endif %}
+
+        <div>
+            If you will be randomly assigned to the role of Receiver,
+            then your answer to one of the following questions will be shown to the second participant.
+        </div>
+        <div class="my-3">
+            If you will be randomly assigned to the role of Sender,
+            then another participant's answer will be shown to you.
+        </div>
+
     </div>
 </div>
