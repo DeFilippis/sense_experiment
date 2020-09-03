@@ -1,15 +1,17 @@
 {% extends "global/Page.html" %}
-{% load otree  %}
+{% load otree %}
 
 {% block title %}
-    Инструкция:
+    Instruction
 {% endblock %}
 
 {% block content %}
-    <div class="lead text-center">Внимательно ознакомьтесь со следующим текстом!</div>
+    <div class="lead text-center">
+        Please read the following text carefully!
+    </div>
     {% include 'survey_sens/includes/instructions.html' %}
-    <div class="lead text-center my-3">Вы всегда можете перечитать эту инструкцию, нажав кнопку "Инструкция" в верхней
-        части экрана
+    <div class="lead text-center my-3">
+        You can always re-read this manual by clicking the "Instructions" button at the top of the screen
     </div>
 
     {% next_button %}

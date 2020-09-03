@@ -220,10 +220,10 @@ class Player(BasePlayer):
         label="",
         choices=Constants.Range010,
         widget=LikertWidget(
-            quote="Как вы относитесь к людям гомосексуальной ориентации, геям, лесбиянкам?",
-            label="Выберите значение на шкале от 0 до 10, где 0 - Отрицательно, а 10 - Положительно:",
-            left="Отрицательно",
-            right="Положительно",
+            quote="What is your attitude towards homosexual people, gays, lesbians?",
+            label="Select a value on a scale from 0 to 10, where 0 is Negative and 10 is Positive:",
+            left="Negative",
+            right="Positive",
             html_class='bg-primary text-white'
         )
     )
@@ -243,12 +243,10 @@ class Player(BasePlayer):
         label="",
         choices=Constants.Range010,
         widget=LikertWidget(
-            quote="Насколько вы согласны с утверждением: 'дело мужа — зарабатывать деньги, а дело жены — "
-                  "вести домашнее хозяйство и заниматься семьей.'",
-            label="Выберите значение на шкале от 0 до 10, где 0 - Полностью не согласен, 10 - Полностью "
-                  "Согласен",
-            left="Полностью не согласен",
-            right="Полностью согласен",
+            quote="To what extent you agree with the statement: It's up to the husband to make money, and it's up to the wife to run the house and take care of the family...'",
+            label="Choose a value on a scale from 0 to 10, where 0 - Fully disagree, 10 - Fully agree.",
+            left="I totally disagree",
+            right="I totally agree.",
             html_class='bg-primary text-white'
         )
     )
@@ -269,10 +267,10 @@ class Player(BasePlayer):
         label="",
         choices=Constants.Range010,
         widget=LikertWidget(
-            quote="Как вы считаете, насколько В. Путин справляется с обязанностями президента",
-            label="Выберите значение на шкале от 0 до 10, где 0 - Плохо, 10 - Хорошо ",
-            left="Плохо",
-            right="Хорошо",
+            quote="How do you think V. Putin copes with the President's duties?",
+            label="Select a value on a scale from 0 to 10, where 0 - Bad, 10 - Good",
+            left="Bad",
+            right="Good",
             html_class='bg-primary text-white'
         )
     )

@@ -2,11 +2,11 @@
 {% load otree static %}
 
 {% block title %}
-   Анкета
+   Questionnaire
 {% endblock %}
 
 {% block content %}
-      {% if  session.config.info %}
+      {% if  session.config.info and view.info|default_if_none:False %}
         {% include  'survey_sens/includes/info_warning.html' %}
     {% endif %}
     {{ form.media }}

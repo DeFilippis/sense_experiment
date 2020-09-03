@@ -6,17 +6,18 @@
 {% endblock %}
 
 {% block content %}
-    <div></div>
-    <div>
-        In this exploration, you will make decisions and interact with another randomly selected user of Toloka in real
-        time. In this regard, there may be pauses in the game, during which you need to wait for your opponent.
+
+    <div class="my-3">
+        In this study, you will make decisions and interact with another randomly selected user of Toloka in real
+        time. Therefore, there may be pauses in the game, during which you need to wait for your opponent.
     </div>
-    <p>
-        The study is in two parts.
-    </p>
+    <div  class="my-3"  >
+        The study consists of two parts: short questionnaire and the decision making task. We explain the details of
+        the tasks at the next page.
+    </div>
 
     <p>
-        For participation you will receive $${{ session.config.toloka_participation_fee|floatformat:2 }}, which will be
+        For participation you will receive ${{ session.config.toloka_participation_fee|floatformat:2 }}, which will be
         paid after you send the correct code in the Toloka interface. You will be shown this code immediately after
         completing the research.
 
