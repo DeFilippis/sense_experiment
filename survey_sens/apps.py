@@ -13,4 +13,4 @@ class SensConfig(AppConfig):
             'django.templatetags.i18n'
         ]
 
-        print("AAAA", settings.TEMPLATES)
+

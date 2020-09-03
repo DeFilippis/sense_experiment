@@ -2,24 +2,32 @@
 {% load i18n %}
 
 {% block title %}
-    Спасибо, что согласились принять участие в этом исследовании!
+    Thank you for agreeing to participate in this study!
 {% endblock %}
 
 {% block content %}
     <div></div>
-    <div> В этом исследовании Вы будете принимать решения и взаимодействовать с другим, случайно выбранным пользователем
-        Толоки в режиме реального времени. В связи с этим могут возникнуть паузы в игре, во время
-        которых Вам нужно дождаться вашего оппонента.
+    <div>
+        In this exploration, you will make decisions and interact with another randomly selected user of Toloka in real
+        time. In this regard, there may be pauses in the game, during which you need to wait for your opponent.
     </div>
-    <p> Исследование состоит из двух частей.</p>
+    <p>
+        The study is in two parts.
+    </p>
 
-    <p> За участие Вы получите ${{ session.config.toloka_participation_fee|floatformat:2 }}, которые
-        будут выплачены после
-        того, как Вы отправите
-        правильный код в интерфейсе Толока. Этот код вам будет показан сразу после завершения исследования.</p>
+    <p>
+        For participation you will receive $${{ session.config.toloka_participation_fee|floatformat:2 }}, which will be
+        paid after you send the correct code in the Toloka interface. You will be shown this code immediately after
+        completing the research.
 
-    <p> Вы можете заработать дополнительные деньги (до $1), которые будут выплачены Вам в качестве <b> бонуса</b> в Толоке.</p>
-    <p> На следующей странице Вам будет предоставлена инструкция, описывающая ход исследования. </p>
+
+
+    <p>
+        You can earn extra money (up to $ 1) that will be paid to you as a bonus in Toloka.
+    </p>
+    <p>
+        On the next page you will be provided with instructions describing the course of the study.
+    </p>
 
     {% next_button %}
 
