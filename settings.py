@@ -24,9 +24,19 @@ SESSION_CONFIGS = [
 
     ),
     dict(
-        name='treatment',
+        name='info_dg_first',
         num_demo_participants=2,
-        app_sequence=['start', 'survey_sens', 'last'],
+        app_sequence=['start', 'dg', 'survey_sens', 'last'],
+        info=True,
+        toloka=True,
+        dg_first=True,
+        toloka_sandbox=True
+
+    ),
+    dict(
+        name='info_dg',
+        num_demo_participants=2,
+        app_sequence=['start', 'survey_sens', 'dg', 'last'],
         info=True,
         toloka=True,
         toloka_sandbox=True
@@ -47,7 +57,6 @@ DECIMAL_SEPARATOR = '.'
 FORMAT_MODULE_PATH = [
     'survey_sens.formats',
 ]
-
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
