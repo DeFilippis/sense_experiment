@@ -17,7 +17,13 @@ SESSION_CONFIGS = [
     dict(
         name='baseline',
         num_demo_participants=2,
-        app_sequence=['start', 'survey_sens', 'last'],
+        app_sequence=[
+            'start',
+            'sorter',
+            'survey_sens',
+            'dg',
+            'last'
+        ],
         info=False,
         toloka=True,
         toloka_sandbox=True
@@ -26,7 +32,13 @@ SESSION_CONFIGS = [
     dict(
         name='info_dg_first',
         num_demo_participants=2,
-        app_sequence=['start', 'dg', 'survey_sens', 'last'],
+        app_sequence=[
+            'start',
+            'sorter',
+            'survey_sens',
+            'dg',
+            'last'
+        ],
         info=True,
         toloka=True,
         dg_first=True,
@@ -36,7 +48,13 @@ SESSION_CONFIGS = [
     dict(
         name='info_dg',
         num_demo_participants=2,
-        app_sequence=['start', 'survey_sens', 'dg', 'last'],
+        app_sequence=[
+            'start',
+            'sorter',
+            'survey_sens',
+            'dg',
+            'last'
+        ],
         info=True,
         toloka=True,
         toloka_sandbox=True

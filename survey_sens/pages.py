@@ -5,10 +5,6 @@ from .models import Constants
 import json
 
 
-class FirstWP(WaitPage):
-    group_by_arrival_time = True
-    body_text = 'Please wait until we find another Toloka member...'
-
 
 class QuestionnaireF(Page):
     form_model = 'player'
@@ -23,7 +19,6 @@ class QuestionnaireF(Page):
                    'satisfaction',
 
                    ]
-
 
 class QuestionnaireS(Page):
     # TODO: do order randomization in a proper way
@@ -46,48 +41,6 @@ class QuestionnaireSAverage(Page):
         return [f for f in fields if f.startswith('average')]
 
 
-class IntroGame(Page):
-    pass
-
-
-class GameDescription(Page):
-    show_instructions = True
-
-
-class RoleAnnouncement(Page):
-    show_instructions = True
-
-
-class BeforeDictatorWP(WaitPage):
-    pass
-
-
-class DictatorSender(Page):
-    show_instructions = True
-    form_model = 'group'
-    form_fields = ['sent_amount']
-
-    def is_displayed(self):
-        return self.player.role() == 'dictator'
-
-
-class DictatorReceiver(Page):
-    show_instructions = True
-    form_model = 'group'
-    form_fields = ['expected_receiver']
-
-    def is_displayed(self):
-        return self.player.role() == 'receiver'
-
-
-class DictatorSenderExpected(Page):
-    show_instructions = True
-    form_model = 'group'
-    form_fields = ['expected_sender']
-
-    def is_displayed(self):
-        return self.player.role() == 'dictator'
-
 
 class BeforeResultsWP(WaitPage):
     after_all_players_arrive = 'set_payoffs'
@@ -101,11 +54,7 @@ page_sequence = [
     FirstWP,
     QuestionnaireS,
     QuestionnaireSAverage,
-    RoleAnnouncement,
-    BeforeDictatorWP,
-    DictatorSender,
-    DictatorReceiver,
-    DictatorSenderExpected,
+
     BeforeResultsWP,
     QuestionnaireF,
     Results,
