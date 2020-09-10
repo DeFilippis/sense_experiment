@@ -8,11 +8,7 @@ class IntroGame(Page):
     pass
 
 
-class GameDescription(Page):
-    show_instructions = True
-
-
 page_sequence = [
     IntroGame,
-    GameDescription
+
 ]

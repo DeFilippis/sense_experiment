@@ -10,16 +10,16 @@ from otree.api import (
 )
 
 
-author = 'Your name here'
+author = 'Philip Chapkovski, HSE'
 
 doc = """
-Your app description
+Dictator's game module for sensitivity experiment
 """
 
 
 class Constants(BaseConstants):
     name_in_url = 'dg'
-    players_per_group = None
+    players_per_group = 2
     num_rounds = 1
 
 

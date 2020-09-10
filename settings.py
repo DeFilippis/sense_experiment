@@ -22,9 +22,11 @@ SESSION_CONFIGS = [
             'sorter',
             'survey_sens',
             'dg',
+            'questionnaire',
             'last'
         ],
         info=False,
+        baseline=True,
         toloka=True,
         toloka_sandbox=True
 
@@ -35,8 +37,9 @@ SESSION_CONFIGS = [
         app_sequence=[
             'start',
             'sorter',
-            'survey_sens',
             'dg',
+            'survey_sens',
+            'questionnaire',
             'last'
         ],
         info=True,
@@ -53,6 +56,7 @@ SESSION_CONFIGS = [
             'sorter',
             'survey_sens',
             'dg',
+            'questionnaire',
             'last'
         ],
         info=True,

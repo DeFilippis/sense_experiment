@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+
+
+{% block title %}
+    Questionnaire
+{% endblock %}
+
+{% block content %}
+    {{ form.media }}
+    {% formfields %}
+    {% next_button %}
+
+{% endblock %}

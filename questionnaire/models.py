@@ -8,7 +8,7 @@ from otree.api import (
     Currency as c,
     currency_range,
 )
-
+from survey_sens.widgets import LikertWidget
 
 author = 'Philipp Chapkovski, HSE-Moscow'
 

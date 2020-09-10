@@ -7,27 +7,25 @@
 
 {% block content %}
 
-    <div class="my-3">
-        In this study, you will make decisions and interact with another randomly selected user of Toloka in real
-        time. Therefore, there may be pauses in the game, during which you need to wait for your opponent.
-    </div>
-    <div  class="my-3"  >
-        The study consists of two parts: short questionnaire and the decision making task. We explain the details of
-        the tasks at the next page.
-    </div>
 
+    <div class="my-3">
+        The study consists of three parts: two short questionnaires and one decision-making task.
+        We explain the details of each stage in one of the following pages.
+    </div>
+    <p>
+    In total the study takes about 15 minutes.
+    </p>
     <p>
         For participation you will receive ${{ session.config.toloka_participation_fee|floatformat:2 }}, which will be
         paid after you send the correct code in the Toloka interface. You will be shown this code immediately after
         completing the research.
 
-
-
     <p>
-        You can earn extra money (up to $ 1) that will be paid to you as a bonus in Toloka.
+        As a result of decision-making task you can earn extra money (up to $ 1)
+        that will be paid to you as a bonus in Toloka.
     </p>
     <p>
-        On the next page you will be provided with instructions describing the course of the study.
+        On the next pages you will be provided with instructions describing the course of the study.
     </p>
 
     {% next_button %}

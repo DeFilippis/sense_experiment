@@ -3,6 +3,13 @@ from ._builtin import Page, WaitPage
 from .models import Constants
 
 
+class FirstWP(WaitPage):
+    def is_displayed(self):
+        return self.session.config.get('baseline')
+
+    group_by_arrival_time = True
+    body_text = 'Please wait until we find another Toloka member...'
+
 
 class IntroGame(Page):
     pass
@@ -47,8 +54,8 @@ class DictatorSenderExpected(Page):
         return self.player.role() == 'dictator'
 
 
-
 page_sequence = [
+    FirstWP,
     RoleAnnouncement,
     BeforeDictatorWP,
     DictatorSender,
