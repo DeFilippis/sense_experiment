@@ -32,6 +32,11 @@ class DictatorSender(Page):
     form_model = 'group'
     form_fields = ['sent_amount']
 
+    def vars_for_template(self):
+        return dict(
+            pure_info=self.session.config.get('info') and not self.session.config.get('dg_first')
+        )
+
     def is_displayed(self):
         return self.player.role() == 'dictator'
 

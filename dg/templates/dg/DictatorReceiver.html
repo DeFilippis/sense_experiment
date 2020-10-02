@@ -2,14 +2,15 @@
 {% load otree i18n %}
 
 {% block title %}
-   Вы {{ player.role_desc }}
+    Your role is: {{ player.role_desc }}
 {% endblock %}
 
 {% block content %}
     <p>
-        Вам выпала роль <b>Получателя.</b> Вы не можете повлиять на решение другого участника.
+        Your role is <b>Receiver</b>. You are not able to affect the bonus of another participant.
     </p>
-    <p> Какую сумму, по Вашему мнению, отправит Вам другой участник (<b>Отправитель</b>), от 0 до 100 центов ($1)?</p>
+    <p>What amount in your opinion will be sent to you by another participant (<b>Sender</b>), from 0 to 100 cents
+        ($1)?</p>
     {% formfield group.expected_receiver %}
     {% next_button %}
 

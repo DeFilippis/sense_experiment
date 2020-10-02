@@ -9,7 +9,6 @@ from otree.api import (
     currency_range,
 )
 
-
 author = 'Philip Chapkovski, HSE'
 
 doc = """
@@ -21,6 +20,7 @@ class Constants(BaseConstants):
     name_in_url = 'dg'
     players_per_group = 2
     num_rounds = 1
+    endowment = 100
 
 
 class Subsession(BaseSubsession):
@@ -31,7 +31,7 @@ class Group(BaseGroup):
     sent_amount = models.CurrencyField(
         max=c(100),
         min=c(0),
-        label=f"How much do you want to send to another participant (Recipient)? (choose any amount from 0 to 100 cents)"
+        label=f"How much do you want to send to another participant (Recipient)? Choose any amount from 0 to 100 cents"
     )
 
     expected_sender = models.CurrencyField(
@@ -59,8 +59,14 @@ class Player(BasePlayer):
             return 'dictator'
         else:
             return 'receiver'
+
     def role_desc(self):
         """Return russian description of role"""
         descs = dict(dictator="Sender",
                      receiver="Receiver")
         return descs.get(self.role())
+
+    def get_other_answer(self):
+        # todo very rough naive fix. should be redone completely
+        other = self.get_others_in_group()[0]
+        return other.participant.survey_sens_player.first().get_other_answer()

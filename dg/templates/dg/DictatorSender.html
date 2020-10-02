@@ -7,9 +7,9 @@
 
 {% block content %}
 
-    {% if  session.config.info %}
+    {% if  pure_info %}
         <link rel="stylesheet" href="{% static 'global/css/likert.css' %}">
-        <div> The answer of the second participant is marked <span class="bg-danger text-white">in red</span>):</div>
+        <div> The answer of the second participant is marked <span class="bg-danger text-white">in red</span>:</div>
         <div class="card my-3">
             <div class="card-body">
                 {{ player.get_other_answer }}
@@ -20,16 +20,18 @@
 
 
     <p>
-    You have the role of Sender. You have 100 cents ($1) which you can share in any way.
+        You have 100 cents ($1) which you can divide between you and another participant (<b>Receiver</b>) in any
+        proportion.
     </p>
     <p>
-    Choose the amount in cents that you want to send, the balance you get as a bonus.
+        Choose the amount in cents that you want to send to a <b>Receiver</b>, the rest you will receive as a bonus in
+        Toloka.
     </p>
     {% formfield group.sent_amount %}
 
     <div class="form-group ">
         <label class="col-form-label">
-           Your bonus will be:
+            Your bonus will be:
         </label>
         <div class="controls  ">
             <div class="input-group input-group-narrow">
@@ -50,6 +52,7 @@
     <script>
         const endowment = {{ Constants.endowment|json }}
             $('#id_sent_amount').on('input', function (e) {
+                console.debug('END', endowment)
                 let curval = this.value;
                 if (curval > endowment) {
                     this.value = endowment

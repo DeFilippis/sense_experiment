@@ -1,13 +1,17 @@
 {% extends "global/Page.html" %}
 {% load otree static %}
-Info page
+
 {% block title %}
-    Questionnaire
+    The answer of another participant
 {% endblock %}
 
 {% block content %}
-    <div>
-        WE SHOW HERE THE OTHER'S ANSWER FOR DG FIRST TREATMENT
+    <link rel="stylesheet" href="{% static 'global/css/likert.css' %}">
+    <div> The answer of the second participant is marked <span class="bg-danger text-white">in red</span>:</div>
+    <div class="card my-3">
+        <div class="card-body">
+            {{ player.get_other_answer }}
+        </div>
     </div>
     {% next_button %}
 

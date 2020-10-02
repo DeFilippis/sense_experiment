@@ -2,12 +2,13 @@
 {% load otree i18n %}
 
 {% block title %}
-    Вы Отправитель
+    You are the Sender
 {% endblock %}
 
 {% block content %}
 
-    <p> По-вашему, сколько другой участник (<b>Получатель</b>) полагает, что вы ему пошлете (от 0 до 100 центов).</p>
+    <p> How much do you think the <b>Receiver</b> expects to get from you (from 0 to 100 cents)?</p>
+
 
     {% formfield group.expected_sender %}
 
