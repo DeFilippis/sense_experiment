@@ -1,14 +1,18 @@
 <div class="card my-3">
     <div class="card-body">
         <div>
-            Two participants take part in this study: you and another random user of Toloka.
+            Two participants take part in this study: you and another randomly chosen participant.
         </div>
         <div>
             Each participant will receive one of two roles: <b>Sender</b> or <b>Receiver</b>.
         </div>
         <div>
-            The roles are determined randomly. You will find out what role you got as soon as you answer the short
-            questionnaire.
+            The roles are determined randomly.
+            {% if session.config.info %}
+                You will find out what role you got as soon as you answer the short
+                questionnaire.
+            {% endif %}
+
         </div>
         <div>
             Depending on the role, you can either change the bonus that you and the other participant will get or not.
@@ -42,10 +46,10 @@
 
             <div>
                 The part of 100 cents that the Sender decided to send to the Recipient will be paid to the Recipient in
-                the form of a Toloka bonus.
+                the form of a bonus.
             </div>
             <div>
-                The remaining part of 100 cents will be paid to the Sender as a Toloka bonus.
+                The remaining part of 100 cents will be paid to the Sender as a bonus.
             </div>
 
             <p>
@@ -57,8 +61,8 @@
                 <b>
                     Information:
                 </b>
-                <div>The Recipient's answer to one of the questionnaire questions marked in blue will be shown to the
-                    second participant (Sender) when he makes a decision.
+                <div>Your answer to one of the questionnaire questions marked in blue will be shown to the
+                    second participant.
                 </div>
             </div>
         {% endif %}

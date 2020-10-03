@@ -5,20 +5,9 @@ from .models import Constants
 import json
 
 
-class QuestionnaireF(Page):
-    form_model = 'player'
-    form_fields = ['age',
-                   'sex', 'marital_status',
-                   'religion',
-                   'education',
-                   'occupation',
-                   'relative_income_2',
-                   'trust',
-                   'happy',
-                   'satisfaction',
-
-                   ]
-
+class PartBeginningAnnouncement(Page):
+    def is_displayed(self):
+        return self.session.config.get('dg_first')
 
 class QuestionnaireS(Page):
     # TODO: do order randomization in a proper way
@@ -59,7 +48,7 @@ class OtherInfo(Page):
         return self.session.config.get('info')
 
 
-class SecondPartAnnouncement(Page):
+class NextPartAnnouncement(Page):
     def is_displayed(self):
         """We don't have a dg after that if dg goes first so we skip this announcmenet.
         """
@@ -97,11 +86,12 @@ class GameDescription(Page):
 
 
 page_sequence = [
+    PartBeginningAnnouncement,
     QuestionnaireS,
     QuestionnaireSAverage,
     OtherInfoWP,
     OtherInfo,
-    SecondPartAnnouncement,
+    NextPartAnnouncement,
     GameDescription
 
 ]

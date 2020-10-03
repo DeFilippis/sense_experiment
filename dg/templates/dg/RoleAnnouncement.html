@@ -12,9 +12,10 @@
     <div class="card my-3">
         <div class="card-body">
             {% if player.role == 'dictator' %}
-                This means that the bonus will depend on your decision - yours and the second participant.
+                This means that your bonus and the bonus of the second participant
+                will depend on your decision.
             {% else %}
-                This means that the decision of the second participant will depend on yours and its bonus.
+                This means that the decision of the second participant will define your bonus.
 
             {% endif %}
         </div>

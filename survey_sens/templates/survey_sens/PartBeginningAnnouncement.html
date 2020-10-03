@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey is about to start
+{% endblock %}
+
+{% block content %}
+    <div class="text-center"><code>This page is shown only if the DG goes first.</code></div>
+    <div class="lead text-center">  Survey is about to start</div>
+    <div class="lead text-center">  One of your answers to the questions in the following survey marked in blue will be shown to a second participant. </div>
+    {% next_button %}
+{% endblock %}
+
+

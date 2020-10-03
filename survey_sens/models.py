@@ -85,10 +85,6 @@ class Player(BasePlayer):
 
 
     q_order = models.StringField(doc='to store randomized order of sensitive questions')
-    age = models.IntegerField(
-        min=0,
-        label="Укажите Ваш возраст:"
-    )
 
 
     homosexuality_attitude = models.IntegerField(

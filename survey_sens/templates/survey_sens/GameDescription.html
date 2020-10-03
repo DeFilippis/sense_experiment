@@ -2,7 +2,8 @@
 {% load otree static %}
 
 {% block title %}
-    Instructions:
+
+    Decision-making task. Instructions
 {% endblock %}
 
 {% block content %}
@@ -10,9 +11,10 @@
         Please read the following text carefully!
     </div>
     {% include 'survey_sens/includes/instructions.html' %}
-    <div class="lead text-center my-3">
-        You can always re-read this manual by clicking the "Instructions" button at the top of the screen
-    </div>
+{#    TODO: #}
+{#    <div class="lead text-center my-3">#}
+{#        You can always re-read this manual by clicking the "Instructions" button at the top of the screen#}
+{#    </div>#}
 
     {% next_button %}
 

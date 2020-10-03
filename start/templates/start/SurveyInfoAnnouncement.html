@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Survey: instructions
+{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <code>
+            We should announce here that one of the answers will be shown to a partner
+        </code>
+    </div>
+    <div class="lead  ">
+        This study consists of three parts. <b>First</b> we will ask you to answer a short questionnaire.
+    Then <b>in a second part</b> you and another randomly chosen participant will participate in a decision-making task. Then you will
+    fill another brief survey.
+    </div><div class="lead  ">
+        The first part of the study is a brief survey. One of the answers to the questions marked in blue will
+        be shown to the participant you will be matched in <b>a second part</b>.
+    </div>
+    <div class="lead ">
+        The instructions for the decision-making part will be shown to you at the next page.
+    </div>
+    {% next_button %}
+
+{% endblock %}
